@@ -1,6 +1,6 @@
 obj-m = bru_driver.o
 
-KERNEL_SRC := /home/c749s385/Documents/firesim/sw/firesim-software/boards/firechip/linux
+KERNEL_SRC := #This should point to your linux source in Firemarshal e.g. firesim/sw/firesim-software/boards/firechip/linux
 CROSS_COMPILE := riscv64-unknown-linux-gnu-
 ARCH := riscv
 PWD := $(CURDIR)
