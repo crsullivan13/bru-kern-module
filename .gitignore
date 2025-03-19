@@ -1,0 +1,6 @@
+.bru*
+.Module*
+.modules*
+Module.symvers
+mmio_map.h
+modules.order
