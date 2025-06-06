@@ -14,8 +14,8 @@
 #define BUF_SIZE 256
 #define DEVICE_NAME "bru_driver"
 
-#define N_DOMAINS 1 // TODO: read this from bru registers eventually
-#define N_CLIENTS 1 // TODO: read this from bru registers eventually
+#define N_DOMAINS 4 // TODO: read this from bru registers eventually
+#define N_CLIENTS 2 // TODO: read this from bru registers eventually
 
 #define UNMAPPED_BASE 0x20000000 // Reg-map base address
 #define MAX  0x20000800 // Reg-map max address
@@ -204,6 +204,7 @@ static ssize_t client_control_write(struct file *file, const char __user *user_b
         sscanf(p, "%lld", &domain);
         writeq(domain, (volatile void *)CLIENT_DOMAIN(i));
 
+        p++;
         p = strchr(p, ' ');
         if ( !p ) {
             break;
